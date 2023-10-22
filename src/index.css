@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 12px; /* Genişlik */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Kaydırma çubuğu (küçük kare) rengi */
+  border-radius: 6px; /* Kenar yarıçapı */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Fare üzerine geldiğinde kaydırma çubuğu rengi */
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0c; /* Kaydırma çubuğu arka plan rengi */
+}
+
+::-webkit-scrollbar-button {
+  display: none; /* Kaydırma oklarını gizleme */
+}
+
+body {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(15, 15, 15);
+  overflow: hidden;
+}
+
+.videos{
+  width: 100%;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minMax(350px, 450px));
+  justify-content: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sidebar{
+  height: 100vh;
+  overflow: auto;
+}
+
+@media (max-width:768px) {
+  .videos{
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    gap: 50px;
+    padding: 20px;
+  }
+}
